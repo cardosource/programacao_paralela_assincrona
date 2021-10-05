@@ -1,8 +1,5 @@
-import numpy as np
-
 import datetime
-
-
+import numpy as np
 from threading import Thread
 
 inicio = datetime.datetime.now()
@@ -69,6 +66,3 @@ thread.join()
     
 tempo_atual = datetime.datetime.now() - inicio
 print(f'Tempo de duração foi de {tempo_atual.total_seconds():.5f} segundos')
-
-#Tempo de duração foi de 16.04658 segundos
-#
