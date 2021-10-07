@@ -49,29 +49,25 @@ entradas = np.array([[0,0],
                      [1,1]])
 
 saidas = np.array([[0],[1],[1],[0]])
-
-
 pesos0 = 2*np.random.random((2,3)) - 1
 pesos1 = 2*np.random.random((3,1)) - 1
 epocas=10000
-
 taxaAprendizagem = 0.5
 momento = 1
+
 def main():
     iterable =  list(range(1))
     tamanho_pool  = multiprocessing.cpu_count() * 4
-    pool = multiprocessing.Pool(processes=tamanho_pool)
-   
-
-    
+    pool = multiprocessing.Pool(processes=tamanho_pool)    
     func = partial(processar, epocas, entradas,saidas,taxaAprendizagem,momento,pesos0, pesos1)
     pool.map(func, iterable)
     pool.close()
     pool.join()
 
+    
+    
 if __name__ == "__main__":
     main()
-
 
 tempo_atual = datetime.datetime.now() - inicio
 print(f'Tempo de duração foi de {tempo_atual.total_seconds():.5f} segundos')
