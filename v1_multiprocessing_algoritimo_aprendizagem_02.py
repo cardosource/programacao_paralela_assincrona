@@ -1,11 +1,10 @@
 import multiprocessing
 from functools import partial
-
-
 import numpy as np
 import datetime
 
 inicio = datetime.datetime.now()
+
 def sigmoid(soma):
     return 1 / (1 + np.exp(-soma))
 
