@@ -1,6 +1,5 @@
 import numpy as np
 import datetime
-
 from concurrent.futures.process import ProcessPoolExecutor as Process
 from threading import Thread
 
