@@ -3,17 +3,12 @@ import datetime
 from threading import Thread
 from concurrent.futures.process import ProcessPoolExecutor as Process
 
-
-
-
 inicio = datetime.datetime.now()
 def sigmoid(soma):
     return 1 / (1 + np.exp(-soma))
 
 def sigmoidDerivada(sig):
     return sig * (1 - sig)
-
-
 
 def processar(epocas, entradas,saidas,taxaAprendizagem,momento,pesos0, pesos1):
     for j in range(epocas):
@@ -51,11 +46,8 @@ entradas = np.array([[0,0],
                      [1,1]])
 
 saidas = np.array([[0],[1],[1],[0]])
-
-
 pesos0 = 2*np.random.random((2,3)) - 1
 pesos1 = 2*np.random.random((3,1)) - 1
-
 epocas = 10000
 taxaAprendizagem = 0.5
 momento = 1
@@ -63,14 +55,10 @@ momento = 1
 if __name__ == '__main__':
 
     with Process() as chamada:
-    
        futuro = chamada.submit(processar, epocas, entradas,saidas,taxaAprendizagem,momento,pesos0, pesos1)
        th = Thread(target=futuro)   
        th.start()
        th.join()
-
-
-
-    
+        
 tempo_atual = datetime.datetime.now() - inicio
 print(f'Tempo de duração foi de {tempo_atual.total_seconds():.5f} segundos')
