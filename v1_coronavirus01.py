@@ -22,6 +22,3 @@ if __name__ == '__main__':
 
 tempo_atual = datetime.datetime.now() - inicio
 print(f'Tempo de duração foi de {tempo_atual.total_seconds():.5f} segundos')
-
-
-#https://rickandmortyapi.com/
