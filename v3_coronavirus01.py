@@ -25,9 +25,7 @@ async def processar_dados(queue: asyncio.Queue):
 
 
 async def main():
-
     url_api=["https://exchange.vcoud.com/coronavirus/latest"]
-
     queue = asyncio.Queue()
     for endreco in url_api:
         await gestor(endreco, queue)
@@ -39,8 +37,5 @@ if __name__ == "__main__":
     el.run_until_complete(main())
     el.close()
 
-
 tempo_atual = datetime.datetime.now() - inicio
 print(f'Tempo de duração foi de {tempo_atual.total_seconds():.5f} segundos')
-
-
