@@ -9,7 +9,6 @@ async def gestor(url:str, queue: asyncio.Queue):
     await queue.put(url)
 
 async def processar_dados(queue: asyncio.Queue):
-
      print(".... processando")
      rest = await queue.get()
      async with aiohttp.ClientSession() as start:
