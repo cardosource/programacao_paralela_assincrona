@@ -2,6 +2,7 @@ import asyncio
 import aiohttp
 from asyncio.queues import Queue
 import datetime
+
 inicio = datetime.datetime.now()
 
 async def gestor(url:str, queue: asyncio.Queue):
@@ -19,10 +20,6 @@ async def processar_dados(queue: asyncio.Queue):
 
      #   await asyncio.sleep(2)
      print(".... processado!!!")
-
-    
-   
-
 
 async def main():
     url_api=["https://exchange.vcoud.com/coronavirus/latest"]
