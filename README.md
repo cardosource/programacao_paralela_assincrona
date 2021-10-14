@@ -1,6 +1,13 @@
 
 # Abordagens para melhorar o desempenho no processo de execução do códigos 
 
+Dependendo do motivo de cada programa, o tempo de execução não é um ponto relevante para a terefa exercida o processo do inicio ao fim não traz mudança na conclusão do software.   
+Programas especificos necessitam de maior agilidade no tempo util de vida até o resultado exato, são os casos de utilização de api's e calculos de grande volumes cuja diferenças podem disponibilizar a disposição rapida no re-uso do recurso.
+No contexto de dispor mais agilidade ao funcionamento as linguagens de programação oferençem meios para ganhos de tempo essencialmente a linguagem python há o termono chamado de [gil](https://www.machinelearningplus.com/python/python-global-interpreter-lock-gil/) que impede a liberdade de exercer o controle total no entanto existem outros meio de evita-lo (não utilizei nesses prototipos) mas utilizando recusos building na versão atual é possivel minimzar e obter ganhos.
+
+
+
+
 “O número de transistores em um circuito integrado irá dobrar a cada 18 meses.”   
 ([Lei de Moore](https://mittechreview.com.br/nos-nao-estamos-preparados-para-o-fim-da-lei-de-moore/))
  
