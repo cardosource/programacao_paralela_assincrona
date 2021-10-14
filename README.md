@@ -28,4 +28,4 @@ interpretador Python não é thread-safe.)
 
 
 
- ![GitHub](https://img.shields.io/badge/python-3.9-blue) 
+ ![GitHub](https://img.shields.io/badge/python-3.9-blue) ![GitHub](https://img.shields.io/badge/licence-MIT-GREE) 
